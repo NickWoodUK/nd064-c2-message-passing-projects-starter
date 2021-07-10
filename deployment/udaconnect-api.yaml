@@ -31,7 +31,7 @@ spec:
         service: udaconnect-api
     spec:
       containers:
-      - image: nickwooduk/nd064-udaconnect-api:latest
+      - image: nickwooduk/nd064-udaconnect-api:master
         name: udaconnect-api
         imagePullPolicy: Always
         env:
