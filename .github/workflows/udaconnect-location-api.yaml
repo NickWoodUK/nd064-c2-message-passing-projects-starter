@@ -18,7 +18,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: nickwooduk/nd064-udaconnect-api
+          images: nickwooduk/nd064-udaconnect-location-api
           tags: |
             type=ref,event=branch
             type=ref,event=pr
