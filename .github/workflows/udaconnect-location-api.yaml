@@ -1,4 +1,4 @@
-name: Uda Connect API - API Services Package and publish to Docker Registery
+name: Uda Connect Location API - API Services Package and publish to Docker Registery
 
 on:
   push:
