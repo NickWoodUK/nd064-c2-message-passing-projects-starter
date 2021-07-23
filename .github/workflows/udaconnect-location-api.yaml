@@ -3,7 +3,8 @@ name: Uda Connect Location API - API Services Package and publish to Docker Regi
 on:
   push:
     branches:
-      - master, main
+      - master
+      - main
   workflow_dispatch:
 
 jobs:
