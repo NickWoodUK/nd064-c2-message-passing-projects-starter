@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from app import db  # noqa
 from sqlalchemy import Column, Integer, String
 
-from modules.locationApi.app.udaconnect.models import Location
+from ....locationApi.app.udaconnect.models import Location
 
 
 class Person(db.Model):

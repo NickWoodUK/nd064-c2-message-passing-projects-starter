@@ -4,9 +4,9 @@ from typing import Dict, List
 
 from sqlalchemy.sql import text
 
-from modules.api.app import db
-from modules.api.app.udaconnect.models import Connection, Person
-from modules.locationApi.app.udaconnect.models import Location
+from .. import db
+from .models import Connection, Person
+from ....locationApi.app.udaconnect.models import Location
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger("udaconnect-api")

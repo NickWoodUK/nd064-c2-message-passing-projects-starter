@@ -5,12 +5,9 @@ from flask import request
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
 
-from modules.api.app.udaconnect.models import Person
-from modules.api.app.udaconnect.schemas import (
-    ConnectionSchema,
-    PersonSchema,
-)
-from modules.api.app.udaconnect.services import ConnectionService, PersonService
+from .models import Person
+from .schemas import ConnectionSchema, PersonSchema
+from .services import ConnectionService, PersonService
 
 DATE_FORMAT = "%Y-%m-%d"
 
