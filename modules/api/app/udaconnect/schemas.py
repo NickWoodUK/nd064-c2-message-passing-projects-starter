@@ -1,18 +1,7 @@
-from app.udaconnect.models import Connection, Location, Person
-from geoalchemy2.types import Geometry as GeometryType
 from marshmallow import Schema, fields
-from marshmallow_sqlalchemy.convert import ModelConverter as BaseModelConverter
 
-
-class LocationSchema(Schema):
-    id = fields.Integer()
-    person_id = fields.Integer()
-    longitude = fields.String(attribute="longitude")
-    latitude = fields.String(attribute="latitude")
-    creation_time = fields.DateTime()
-
-    class Meta:
-        model = Location
+from modules.api.app.udaconnect.models import Person
+from modules.locationApi.app.udaconnect.schemas import LocationSchema
 
 
 class PersonSchema(Schema):
