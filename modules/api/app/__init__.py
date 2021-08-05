@@ -7,8 +7,8 @@ db = SQLAlchemy()
 
 
 def create_app(env=None):
-    from modules.api.app.config import config_by_name
-    from modules.api.app.routes import register_routes
+    from .config import config_by_name
+    import modules.api.app.routes
 
     app = Flask(__name__)
     app.config.from_object(config_by_name[env or "test"])
@@ -16,7 +16,7 @@ def create_app(env=None):
 
     CORS(app)  # Set CORS for development
 
-    register_routes(api, app)
+    modules.api.app.routes.register_routes(api, app)
     db.init_app(app)
 
     @app.route("/health")
