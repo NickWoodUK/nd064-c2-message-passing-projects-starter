@@ -4,8 +4,8 @@ from typing import Dict, List
 
 from sqlalchemy.sql import text
 
-from .. import db
 from .models import Connection, Person
+from .. import db
 from ....locationApi.app.udaconnect.models import Location
 
 logging.basicConfig(level=logging.WARNING)
