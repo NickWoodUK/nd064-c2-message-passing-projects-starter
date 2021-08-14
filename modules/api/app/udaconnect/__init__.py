@@ -1,5 +1,5 @@
-from .models import Connection, Person
-from .schemas import ConnectionSchema, PersonSchema
+from .models import  Person
+from .schemas import  PersonSchema
 
 
 def register_routes(api, app, root="api"):

@@ -1,5 +1,4 @@
-from datetime import datetime
-from typing import Optional, List
+from typing import List
 
 from flask import request
 from flask_accepts import accepts, responds
