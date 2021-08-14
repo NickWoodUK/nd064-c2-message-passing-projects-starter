@@ -3,7 +3,7 @@ from geoalchemy2.types import Geometry as GeometryType
 from marshmallow import Schema, fields
 from marshmallow_sqlalchemy.convert import ModelConverter as BaseModelConverter
 
-from modules.api.app.udaconnect.schemas import PersonSchema
+from modules.personsApi.app.udaconnect.schemas import PersonSchema
 
 
 class LocationSchema(Schema):

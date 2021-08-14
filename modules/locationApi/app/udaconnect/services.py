@@ -3,12 +3,12 @@ from typing import Dict
 
 import geoalchemy2.functions
 
-from modules.api.app import db
+from modules.personsApi.app import db
 from modules.locationApi.app.udaconnect.models import Location
 from modules.locationApi.app.udaconnect.schemas import LocationSchema
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-api")
+logger = logging.getLogger("udaconnect-personsApi")
 
 
 class LocationService:

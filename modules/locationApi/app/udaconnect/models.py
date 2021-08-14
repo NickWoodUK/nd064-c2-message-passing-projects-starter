@@ -10,7 +10,7 @@ from shapely.geometry.point import Point
 from sqlalchemy import BigInteger, Column, DateTime, ForeignKey, Integer
 from sqlalchemy.ext.hybrid import hybrid_property
 
-from modules.api.app.udaconnect.models import Person
+from modules.personsApi.app.udaconnect.models import Person
 
 
 class Location(db.Model):

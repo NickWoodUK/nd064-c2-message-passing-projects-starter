@@ -9,7 +9,7 @@ from .. import db
 from modules.locationApi.app.udaconnect.models import Location
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-api")
+logger = logging.getLogger("udaconnect-personsApi")
 
 
 class ConnectionService:

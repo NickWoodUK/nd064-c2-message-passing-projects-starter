@@ -19,7 +19,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: nickwooduk/nd064-udaconnect-api
+          images: nickwooduk/nd064-udaconnect-person-api
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -35,7 +35,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./modules/api
+          context: ./modules/persons-personsApi
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
 

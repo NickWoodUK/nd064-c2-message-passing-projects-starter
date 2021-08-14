@@ -5,7 +5,7 @@ from .models import Person
 from .. import db
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-api")
+logger = logging.getLogger("udaconnect-personsApi")
 
 
 class PersonService:
