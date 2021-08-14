@@ -6,8 +6,8 @@ from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
 
 from .models import Person
-from .schemas import ConnectionSchema, PersonSchema
-from .services import ConnectionService, PersonService
+from .schemas import PersonSchema
+from .services import PersonService
 
 DATE_FORMAT = "%Y-%m-%d"
 
