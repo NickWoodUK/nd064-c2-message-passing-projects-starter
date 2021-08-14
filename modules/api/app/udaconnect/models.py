@@ -15,8 +15,3 @@ class Person(db.Model):
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
     company_name = Column(String, nullable=False)
-
-@dataclass
-class Connection:
-    location: Location
-    person: Person
