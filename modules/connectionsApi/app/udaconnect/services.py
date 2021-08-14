@@ -1,15 +1,17 @@
 import logging
+import requests
+
 from datetime import datetime, timedelta
 from typing import Dict, List
 
 from sqlalchemy.sql import text
 
-from .models import Connection, Person
+from .models import Connection, Person, Location
 from .. import db
-from modules.locationApi.app.udaconnect.models import Location
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-personsApi")
+logger = logging.getLogger("udaconnect-connections-api")
+
 
 
 class ConnectionService:
@@ -29,8 +31,11 @@ class ConnectionService:
             Location.creation_time >= start_date
         ).all()
 
+        # get all persons
+        response = requests.get("http://localhost:30001/api/persons")
+
         # Cache all users in memory for quick lookup
-        person_map: Dict[str, Person] = {person.id: person for person in PersonService.retrieve_all()}
+        person_map: Dict[str, Person] = {person.id: person for person in response}
 
         # Prepare arguments for queries
         data = []
