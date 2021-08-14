@@ -31,7 +31,7 @@ spec:
         service: udaconnect-locationapi
     spec:
       containers:
-      - image: nickwooduk/nd064-udaconnect-locationapi:master
+      - image: nickwooduk/nd064-udaconnect-location-api:master
         name: udaconnect-locationapi
         imagePullPolicy: Always
         env:
