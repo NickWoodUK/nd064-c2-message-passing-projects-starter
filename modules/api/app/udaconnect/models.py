@@ -1,9 +1,8 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-
 from app import db  # noqa
 from sqlalchemy import Column, Integer, String
+
 
 class Person(db.Model):
     __tablename__ = "person"

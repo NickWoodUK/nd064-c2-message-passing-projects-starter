@@ -1,12 +1,8 @@
 import logging
-from datetime import datetime, timedelta
 from typing import Dict, List
-
-from sqlalchemy.sql import text
 
 from .models import Person
 from .. import db
-from modules.locationApi.app.udaconnect.models import Location
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger("udaconnect-api")
