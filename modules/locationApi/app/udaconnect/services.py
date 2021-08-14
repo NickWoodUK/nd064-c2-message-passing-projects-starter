@@ -8,7 +8,7 @@ from modules.locationApi.app.udaconnect.models import Location
 from modules.locationApi.app.udaconnect.schemas import LocationSchema
 
 logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-personsApi")
+logger = logging.getLogger("udaconnect-location-api")
 
 
 class LocationService:
