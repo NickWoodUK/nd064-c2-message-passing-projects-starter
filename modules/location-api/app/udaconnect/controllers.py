@@ -32,5 +32,6 @@ class LocationResource(Resource):
     def get(self, location_id) -> Location:
 
         logging.info("Get Location:")
-        location: Location = LocationService.retrieve(location_id)
-        return location
+        return "test"
+        #location: Location = LocationService.retrieve(location_id)
+        #return location
