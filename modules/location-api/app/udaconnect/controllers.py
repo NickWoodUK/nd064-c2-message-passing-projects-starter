@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from modules.api.wsgi import app
 from .models import Location
 from .schemas import (
     LocationSchema
@@ -28,5 +29,7 @@ class LocationResource(Resource):
 
     @responds(schema=LocationSchema)
     def get(self, location_id) -> Location:
+
+        app.logger.info("Get Location:")
         location: Location = LocationService.retrieve(location_id)
         return location
