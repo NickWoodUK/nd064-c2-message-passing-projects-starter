@@ -3,7 +3,7 @@ name: Uda Connect API - API Services Package and publish to Docker Registery
 on:
   push:
     branches:
-      - master, main
+      - main
   workflow_dispatch:
 
 jobs:
