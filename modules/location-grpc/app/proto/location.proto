@@ -1,0 +1,20 @@
+// echo.proto
+syntax = "proto3";
+package echo;
+
+message Location {
+  int32 id = 1;
+  int32 person_id = 2;
+  double latitude = 3;
+  double longitude = 4;
+  string creation_time = 5;
+}
+
+message getLocation {
+  int32 id = 1;
+}
+
+service Locations{
+  rpc Create(Location) returns(Location);
+  rpc Get(getLocation) returns(Location);
+}

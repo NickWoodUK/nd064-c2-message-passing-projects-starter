@@ -150,3 +150,22 @@ Your architecture diagram should focus on the services and how they talk to one 
 ## Tips
 * We can access a running Docker container using `kubectl exec -it <pod_id> sh`. From there, we can `curl` an endpoint to debug network issues.
 * The starter project uses Python Flask. Flask doesn't work well with `asyncio` out-of-the-box. Consider using `multiprocessing` to create threads for asynchronous behavior in a standard Flask application.
+
+## GRPC
+### Install GRPC Tool
+Install the GRPC library using the following command `pip install grpcio grpcio-tools`
+
+### Project Strcuture Setup
+The following blog post has some best practices for how to structure a project using GRPC
+https://towardsdatascience.com/implementing-grpc-server-using-python-9dc42e8daea0
+
+### Generating Code Files
+Use the following command to generate the code files
+
+`
+python3 -m grpc_tools.protoc \
+--python_out=./modules/location-grpc/generated \
+--grpc_python_out=./modules/location-grpc/generated \
+--proto_path=./modules/location-grpc/proto \
+location.proto
+`
